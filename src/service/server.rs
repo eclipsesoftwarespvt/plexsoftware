@@ -27,7 +27,7 @@ pub async fn service(config: Arc<Config>) -> Result<(), ()> {
             );
         })?;
 
-    info!(target: "plexpaper", "PlexScale v{} - built by @arkwyck", env!("CARGO_PKG_VERSION"));
+    info!(target: "plexpaper", "PlexScale v{} — @lucawyck", env!("CARGO_PKG_VERSION"));
     info!(
         target: "plexpaper",
         "Proxying public {} to PlexScale secure server gateway...",
