@@ -8,7 +8,7 @@ pub const PUBLIC_PORT_DEFAULT: u16 = 25565;
 pub const INTERNAL_PORT_PRIMARY: u16 = 25566;
 pub const INTERNAL_PORT_FALLBACK: u16 = 25567;
 
-const SLEEP_AFTER: u32 = 60;
+const SLEEP_AFTER: u32 = 300;
 const MIN_ONLINE_TIME: u32 = 60;
 const START_TIMEOUT: u32 = 120;
 const STOP_TIMEOUT: u32 = 60;
@@ -19,7 +19,7 @@ const JAVA_BIN: &str = "java";
 const JAR_DEFAULT: &str = "server.jar";
 const JAVA_ARGS_DEFAULT: [&str; 5] = [
     "-Xms128M",
-    "-XX:MaxRAMPercentage=95.0",
+    "-XX:MaxRAMPercentage=75.0",
     "-Dterminal.jline=false",
     "-Dterminal.ansi=true",
     "-jar",
@@ -196,9 +196,9 @@ pub struct Motd {
 impl Default for Motd {
     fn default() -> Self {
         Self {
-            sleeping: "§bPlexScale§f - Server is sleeping, join to wake it up\n§fThis server is powered by PlexScale.com - discord.gg/plexscale".into(),
-            starting: "§bPlexScale§f - Server is starting, please wait...\n§fThis server is powered by PlexScale.com - discord.gg/plexscale".into(),
-            stopping: "§bPlexScale§f - Server is going to sleep...\n§fThis server is powered by PlexScale.com - discord.gg/plexscale".into(),
+            sleeping: "§bPlexScale§f - Server is sleeping, join to wake it up\n§fThis server is powered by PlexScale.com".into(),
+            starting: "§bPlexScale§f - Server is starting, please wait...\n§fThis server is powered by PlexScale.com".into(),
+            stopping: "§bPlexScale§f - Server is going to sleep...\n§fThis server is powered by PlexScale.com".into(),
             from_server: false,
         }
     }
